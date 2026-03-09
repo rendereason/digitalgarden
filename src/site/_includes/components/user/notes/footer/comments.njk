@@ -1,0 +1,15 @@
+{% if meta.cusdisAppId %}
+<section class="comments-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--divider-color, #444);">
+  <h3 style="margin-bottom: 1rem;">Comments</h3>
+  <div
+    id="cusdis_thread"
+    data-host="{{ meta.cusdisHost }}"
+    data-app-id="{{ meta.cusdisAppId }}"
+    data-page-id="{{ page.url }}"
+    data-page-url="{{ meta.siteBaseUrl }}{{ page.url }}"
+    data-page-title="{% if title %}{{ title }}{% else %}{{ page.fileSlug }}{% endif %}"
+    data-theme="{{ meta.baseTheme }}"
+  ></div>
+  <script async defer src="{{ meta.cusdisHost }}/js/cusdis.es.js"></script>
+</section>
+{% endif %}
