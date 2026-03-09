@@ -101,6 +101,8 @@ module.exports = async (data) => {
     styleSettingsCss,
     uiStrings,
     buildDate: new Date(),
+    cusdisAppId: process.env.CUSDIS_APP_ID || "",
+    cusdisHost: process.env.CUSDIS_HOST || "https://cusdis.com",
   };
 
   return meta;
